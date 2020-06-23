@@ -26,9 +26,10 @@ public class HelloController {
     }
 
     @ApiOperation("post带参请求")
+    @ApiImplicitParam(name = "username", value = "用户名", dataType = "String", required = true)
     @ResponseBody
     @PostMapping("user/paramByPost")
-    public String paramByPost(@ApiParam("用户名") String username){
+    public String paramByPost( String username){
         System.out.println(username);
         return "测试带参";
     }
