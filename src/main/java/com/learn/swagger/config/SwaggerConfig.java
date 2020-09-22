@@ -1,5 +1,6 @@
 package com.learn.swagger.config;
 
+import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -15,6 +16,9 @@ import java.util.ArrayList;
 
 @Configuration
 @EnableSwagger2
+@EnableSwaggerBootstrapUI
+//http://localhost:9999/doc.html
+//http://localhost:9999/swagger-ui.html
 public class SwaggerConfig {
     @Bean
     public Docket docket(Environment environment){
